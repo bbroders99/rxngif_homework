@@ -18,6 +18,15 @@ class PicturesController < ApplicationController
 
 
   def create
+  	@a = Picture.new
+  	@a.caption = params[:caption]
+  	@a.source = params[:source]
+  	@a.save
+
+  end
+
+
+  def destroy
   end
 
 end
