@@ -2,6 +2,10 @@
 	<h1>All Pictures</h1>
 </div>
 
+<h4> <a href="http://localhost:3000/new_picture_form">Add a new picture</a> </h4>
+
+<br></br>
+
 <ul class="list-unstyled">
 	
 	<% @pic_list.each do |pic| %>
@@ -10,6 +14,8 @@
 			<img width="100" src="<%= pic.source %>">
 			<h4 class="text-muted"><%= pic.caption %></h4>
 			<small class="text-muted"><%= pic.id %></small>
+			<a href="http://localhost:3000/picture_details/<%= pic.id %>">Click to view picture</a>
+
 			<br></br>
 			<br></br>
 		

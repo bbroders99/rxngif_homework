@@ -10,6 +10,7 @@ class PicturesController < ApplicationController
 
   def index
   	@pic_list = Picture.all
+  	
   end
 
 
