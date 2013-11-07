@@ -10,6 +10,8 @@ Rxngif::Application.routes.draw do
 
 	get("/delete_picture/:id", 			{ :controller => "pictures", :action => "destroy" })
 
+	get("/edit_picture_form/:id", 		{ :controller => "pictures", :action => "edit" })
+
 
 end
 

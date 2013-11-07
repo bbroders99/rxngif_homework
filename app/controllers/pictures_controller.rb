@@ -22,13 +22,21 @@ class PicturesController < ApplicationController
   	@a.caption = params[:caption]
   	@a.source = params[:source]
   	@a.save
-
   end
+
 
   def destroy
   	@id = params[:id]
   	@pic = Picture.find_by({ :id => @id })
   	@pic.destroy
+  end
+
+
+  def edit
+  	@id = params[:id]
+  	@pic = Picture.find_by({ :id => @id })
+  	@pic_source = @pic.source
+  	@pic_caption = @pic.caption
   end
 
 end
