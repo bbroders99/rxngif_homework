@@ -1,0 +1,18 @@
+<div class="page-header">
+	<h1>All Pictures</h1>
+</div>
+
+<ul class="list-unstyled">
+	
+	<% @a.each do |pic| %>
+
+		<li>
+			<img width="100" src="<%= pic.source %>">
+			<h4 class="text-muted"><%= pic.caption %></h3>
+			<br></br>
+			<br></br>
+		</li>
+	
+	<% end %>
+<ul>
+
