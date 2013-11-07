@@ -25,8 +25,10 @@ class PicturesController < ApplicationController
 
   end
 
-
   def destroy
+  	@id = params[:id]
+  	@pic = Picture.find_by({ :id => @id })
+  	@pic.destroy
   end
 
 end
