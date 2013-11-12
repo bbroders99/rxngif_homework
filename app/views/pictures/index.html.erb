@@ -2,8 +2,7 @@
 	<h1>All Pictures</h1>
 </div>
 
-<h4> <a href="http://localhost:3000/new_picture_form">Add a new picture</a> </h4>
-
+<h4> <%= link_to("Add a new picture", new_picture_url) %></h4>
 <br></br>
 
 <ul class="list-unstyled">
@@ -11,11 +10,15 @@
 	<% @pic_list.each do |pic| %>
 
 		<li>
+			<div>
+				<%= image_tag("#{pic.source}", :width => 100 ) %>
+			</div>
 		
-			<%= image_tag("#{pic.source}", :width => 100 ) %>
-			<h4 class="text-muted"><%= pic.caption %></h4>
-			<small class="text-muted"><%= pic.id %></small>
-			<%= link_to("Click to view picture", "http://localhost:3000/picture_details/#{pic.id}", :class => "btn btn-primary") %>
+			<h4 class="text-muted"><%= pic.id %>  - <%= pic.caption %></h4>
+
+				<%= link_to "Show", picture_url(pic.id), :class => "btn btn-primary" %>
+				<%= link_to "Edit", edit_picture_url(pic.id), :class => "btn btn-warning" %>
+				<%= link_to "Destroy", picture_url(pic.id), :method => "delete", :class => "btn btn-danger" %>
 
 			<br></br>
 			<br></br>

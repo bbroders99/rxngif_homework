@@ -3,7 +3,7 @@
 </div>
 
 
-<%= form_tag("http://localhost:3000/create_picture") do %>
+<%= form_tag( pictures_url ) do %>
   <div>
     <%= label_tag :caption, "Caption:" %>
     <%= text_field_tag :caption %>
