@@ -11,7 +11,7 @@
 	<% @pic_list.each do |pic| %>
 
 		<li>
-			<img width="100" src="<%= pic.source %>">
+			<img width="120" src="<%= pic.source %>">
 			<h4 class="text-muted"><%= pic.caption %></h4>
 			<small class="text-muted"><%= pic.id %></small>
 			<a href="http://localhost:3000/picture_details/<%= pic.id %>">Click to view picture</a>
