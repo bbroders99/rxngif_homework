@@ -23,6 +23,8 @@ class PicturesController < ApplicationController
   	@pic.caption = params[:caption]
   	@pic.source = params[:source]
   	@pic.save
+
+    redirect_to "http://localhost:3000/all_pictures"
   end
 
 
@@ -30,6 +32,8 @@ class PicturesController < ApplicationController
   	@id = params[:id]
   	@pic = Picture.find_by({ :id => @id })
   	@pic.destroy
+
+    redirect_to "http://localhost:3000/all_pictures"
   end
 
 
@@ -47,6 +51,8 @@ class PicturesController < ApplicationController
   	@pic.caption = params[:caption]
   	@pic.source = params[:source]
   	@pic.save
+
+    redirect_to "http://localhost:3000/picture_details/#{@id}"
 
   end
 

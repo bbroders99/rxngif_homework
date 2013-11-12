@@ -2,11 +2,14 @@
 	<h1>Picture Details</h1>
 </div>
 
-<img width="200px" src="<%= @pic_source %>">
+<%= image_tag("#{@pic_source}", :width =>200 ) %>
+
 <br></br>
 <h3 class="text-muted" > <%= @pic_caption %> </h3>
 
-<a href="http://localhost:3000/edit_picture_form/<%= @pic.id %>">Edit this picture</a>
+<%= link_to("Return to all pictures", "http://localhost:3000/all_pictures", :class => "btn btn-primary") %>
 <p></p>
-<a href="http://localhost:3000/delete_picture/<%= @pic.id %>">Delete this picture</a>
+<%= link_to("Edit this picture", "http://localhost:3000/edit_picture_form/#{@pic.id}", :class => "btn btn-warning") %>
+<p></p>
+<%= link_to("Delete this picture", "http://localhost:3000/delete_picture/#{@pic.id}", :class => "btn btn-danger") %>
 

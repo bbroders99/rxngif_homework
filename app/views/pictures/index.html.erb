@@ -11,10 +11,11 @@
 	<% @pic_list.each do |pic| %>
 
 		<li>
-			<img width="120" src="<%= pic.source %>">
+		
+			<%= image_tag("#{pic.source}", :width => 100 ) %>
 			<h4 class="text-muted"><%= pic.caption %></h4>
 			<small class="text-muted"><%= pic.id %></small>
-			<a href="http://localhost:3000/picture_details/<%= pic.id %>">Click to view picture</a>
+			<%= link_to("Click to view picture", "http://localhost:3000/picture_details/#{pic.id}", :class => "btn btn-primary") %>
 
 			<br></br>
 			<br></br>
